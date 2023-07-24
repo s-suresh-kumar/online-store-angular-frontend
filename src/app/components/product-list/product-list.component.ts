@@ -69,4 +69,11 @@ export class ProductListComponent implements OnInit {
       this.products = data;
     });
   }
+
+  addToCart(theProduct: Product) {
+
+    console.log(`Adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
+
+    // TO DO the real work later
+  }
 }
