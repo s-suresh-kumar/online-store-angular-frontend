@@ -1,5 +1,8 @@
 # angular
 /.angular/cache
+.angular/cache
+.angular/cache/*
+/.angular/cache/*
 
 # Logs
 logs
