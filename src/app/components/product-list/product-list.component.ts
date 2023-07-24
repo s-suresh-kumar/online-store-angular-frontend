@@ -79,5 +79,7 @@ export class ProductListComponent implements OnInit {
 
     // TO DO the real work later
     const theCartItem = new CartItem(theProduct);
+
+    this.cartservice.addToCart(theCartItem);
   }
 }
