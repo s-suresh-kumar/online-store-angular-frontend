@@ -1,3 +1,6 @@
+# angular
+/.angular/cache
+
 # Logs
 logs
 *.log
