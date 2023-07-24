@@ -34,7 +34,7 @@ export class CartService {
       alreadyExistsInCart = (existingCartItem !== undefined);
     }
 
-    if (alreadyExistsInCart) {
+    if (existingCartItem != undefined ) {
 
       // increment  the quantity
       existingCartItem.quantity++;
@@ -73,7 +73,4 @@ export class CartService {
     console.log('----');
   }
 }
-  }
-}
-
-
+  
