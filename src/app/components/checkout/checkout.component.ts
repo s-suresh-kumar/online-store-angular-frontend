@@ -7,11 +7,13 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-
+  shippingAddressChecked = false;
   checkoutFormGroup!: FormGroup;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+   
+
     this.checkoutFormGroup = this.formBuilder.group({
    
     customer: this.formBuilder.group( {
@@ -42,6 +44,17 @@ export class CheckoutComponent implements OnInit {
     })
   });
   }
+
+  copyShippingAddressToBillingAddress() {
+    this.shippingAddressChecked = !this.shippingAddressChecked;
+    if (this.shippingAddressChecked) {
+      this.checkoutFormGroup.controls['billingAddress']
+      .setValue(this.checkoutFormGroup.controls['shippingAddress'].value);
+}
+else {
+      this.checkoutFormGroup.controls['billingAddress'].reset();
+}
+    }
   
   // copyShippingAddressToBillingAddress(event: Event) {
   //   if (event.target instanceof HTMLElement) {
