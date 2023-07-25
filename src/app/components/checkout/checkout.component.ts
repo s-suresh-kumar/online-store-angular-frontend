@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
 import { DeepDiscountShoppingFormService } from 'src/app/services/deep-discount-shopping-form.service';
+import { DeepDiscountShoppingValidators } from 'src/app/validators/deep-discount-shopping-validators';
 
 @Component({
   selector: 'app-checkout',
@@ -31,7 +32,11 @@ export class CheckoutComponent implements OnInit {
     this.checkoutFormGroup = this.formBuilder.group({
 
       customer: this.formBuilder.group({
-        firstName: new FormControl('', [Validators.required, Validators.minLength(2)]),
+        firstName: new FormControl('', 
+                              [Validators.required, 
+                               Validators.minLength(2), 
+                               DeepDiscountShoppingValidators.justBlank]),
+
         lastName: new FormControl('', [Validators.required, Validators.minLength(2)]),
         email: new FormControl('',
           [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')])
