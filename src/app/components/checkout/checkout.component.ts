@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Country } from 'src/app/common/country';
 import { DeepDiscountShoppingFormService } from 'src/app/services/deep-discount-shopping-form.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class CheckoutComponent implements OnInit {
 
   creditCardYears: number[] = [];
   creditCardMonths: number[] = [];
+  countries: Country[] = [];
 
   constructor(private formBuilder: FormBuilder,
               private deepDiscountShoppingFormService: DeepDiscountShoppingFormService) {}
@@ -74,6 +76,16 @@ export class CheckoutComponent implements OnInit {
           this.creditCardYears = data;
         }
       );
+
+    // populate countries
+
+    this.deepDiscountShoppingFormService.getCountries().subscribe(
+      data => {
+        console.log("Retrieved countries: " + JSON.stringify(data));
+        this.countries = data;
+      }
+    );
+
   }
 
   copyShippingAddressToBillingAddress() {
