@@ -14,7 +14,7 @@ export class CheckoutComponent implements OnInit {
   totalQuantity: number = 0;
 
   creditCardYears: number[] = [];
-  creditCardMonthss: number[] = [];
+  creditCardMonths: number[] = [];
 
   constructor(private formBuilder: FormBuilder,
               private deepDiscountShoppingFormService: DeepDiscountShoppingFormService) {}
