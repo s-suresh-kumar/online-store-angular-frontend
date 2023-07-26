@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Country } from 'src/app/common/country';
+import { Order } from 'src/app/common/order';
 import { State } from 'src/app/common/state';
 import { CartService } from 'src/app/services/cart.service';
+import { CheckoutService } from 'src/app/services/checkout.service';
 import { DeepDiscountShoppingFormService } from 'src/app/services/deep-discount-shopping-form.service';
 import { DeepDiscountShoppingValidators } from 'src/app/validators/deep-discount-shopping-validators';
 
@@ -26,7 +29,9 @@ export class CheckoutComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private deepDiscountShoppingFormService: DeepDiscountShoppingFormService,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private checkoutService: CheckoutService,
+    private router: Router) { }
 
   ngOnInit(): void {
 
@@ -176,10 +181,19 @@ export class CheckoutComponent implements OnInit {
 
     if (this.checkoutFormGroup.invalid) {
       this.checkoutFormGroup.markAllAsTouched();
+      return;
     }
 
     console.log(this.checkoutFormGroup.get('customer')?.value);
     console.log("the email address is " + this.checkoutFormGroup.get('customer')?.value.email);
+
+        // set up order
+        let order = new Order();
+        order.totalPrice = this.totalPrice;
+        order.totalQuantity = this.totalQuantity;
+
+
+        
   }
 
   handleMonthsAndYears() {
