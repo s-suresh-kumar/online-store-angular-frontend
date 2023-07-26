@@ -217,15 +217,20 @@ export class CheckoutComponent implements OnInit {
     purchase.shippingAddress = this.checkoutFormGroup.controls['shippingAddress'].value;
     const shippingState: State = JSON.parse(JSON.stringify(purchase?.['shippingAddress']?.state));
     const shippingCountry: Country = JSON.parse(JSON.stringify(purchase?.['shippingAddress']?.country));
-    purchase.['shippingAddress'].state = shippingState.name;
-    purchase.['shippingAddress'].country = shippingCountry.name;
+    if (purchase.shippingAddress != undefined) {
+      purchase.shippingAddress.state = shippingState.name;
+      purchase.shippingAddress.country = shippingCountry.name;
+    }
 
     // populate purchase - billing address
     purchase.billingAddress = this.checkoutFormGroup.controls['billingAddress'].value;
     const billingState: State = JSON.parse(JSON.stringify(purchase?.['billingAddress']?.state));
     const billingCountry: Country = JSON.parse(JSON.stringify(purchase?.['billingAddress']?.country));
-    purchase.['billingAddress'].state = shippingState.name;
-    purchase.['billingAddress'].country = shippingCountry.name;
+    if (purchase.billingAddress != undefined) {
+      purchase.billingAddress.state = billingState.name;
+      purchase.billingAddress.country = billingCountry.name;
+    }
+
 
   }
 
