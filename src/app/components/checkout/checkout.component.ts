@@ -234,6 +234,24 @@ export class CheckoutComponent implements OnInit {
     // populate purchase - order and orderItems
     purchase.order = order;
     purchase.orderItems = orderItems;
+
+    // call REST API via the CheckoutService
+    this.checkoutService.placeOrder(purchase).subscribe({
+      next: response => {
+        alert(`Your order has been received.\nOrder tracking number: ${response.orderTrackingNumber}`);
+
+        // reset cart
+        this.resetCart();
+
+      },
+      error: err => {
+        alert(`There was an error: ${err.message}`);
+      }
+    }
+    );
+  }
+  resetCart() {
+    throw new Error('Method not implemented.');
   }
 
   handleMonthsAndYears() {
