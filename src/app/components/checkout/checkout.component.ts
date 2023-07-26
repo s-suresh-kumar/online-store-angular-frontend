@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
+import { CartService } from 'src/app/services/cart.service';
 import { DeepDiscountShoppingFormService } from 'src/app/services/deep-discount-shopping-form.service';
 import { DeepDiscountShoppingValidators } from 'src/app/validators/deep-discount-shopping-validators';
 
@@ -24,7 +25,8 @@ export class CheckoutComponent implements OnInit {
   billingAddressStates: State[] = [];
 
   constructor(private formBuilder: FormBuilder,
-    private deepDiscountShoppingFormService: DeepDiscountShoppingFormService) { }
+    private deepDiscountShoppingFormService: DeepDiscountShoppingFormService,
+    private cartService: CartService) { }
 
   ngOnInit(): void {
 
