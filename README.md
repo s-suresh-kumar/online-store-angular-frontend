@@ -6,18 +6,17 @@
 
 #### Sample screen shots
 ![Books By Category - Computer Books](src/assets/images/books-by-category-computer-books.JPG)
-![Books By Category - English Books](src\assets\images\books-by-category-english-books.JPG)
-![Books By Category - Garden Books](src\assets\images\books-by-category-garden-books.JPG)
-![Books By Category - Health Books](src\assets\images\books-by-category-health-books.JPG)
-![Books By Category - Tamil Books](src\assets\images\books-by-category-tamil-books.JPG)
-![Books Detail View - Tamil Books](src\assets\images\book-detail-view.JPG)
-![Search By Name View](src\assets\images\search-by-name-garden.JPG)
-![Products added to Cart View](src\assets\images\products_added_to_cart_checkout_page.JPG)
-![Purchase Page View](src\assets\images\purchase_page.JPG)
-![Angular Form Validation View](src\assets\images\angular_form_validation.JPG)
-![Purchase Page View](src\assets\images\purchase_page.JPG)
-![Purchase Complete Order Confirmation Page View](src\assets\images\purchase_comple_order_tracking_number.JPG)
-![login Page View](src\assets\images\login.JPG)
+![Books By Category - English Books](src/assets/images/books-by-category-english-books.JPG)
+![Books By Category - Garden Books](src/assets/images/books-by-category-health-books.JPG)
+![Books By Category - Tamil Books](src/assets/images/books-by-category-tamil-books.JPG)
+![Books Detail View - Tamil Books](src/assets/images/book-detail-view.JPG)
+![Search By Name View](src/assets/images/search-by-name-garden.JPG)
+![Products added to Cart View](src/assets/images/products_added_to_cart_checkout_page.JPG)
+![Purchase Page View](src/ssets/images/purchase_page.JPG)
+![Angular Form Validation View](src/assets/images/angular_form_validation.JPG)
+![Purchase Page View](src/assets/images/purchase_page.JPG)
+![Purchase Complete Order Confirmation Page View](src/assets/images/purchase_comple_order_tracking_number.JPG)
+![login Page View](src/assets/images/login.JPG)
 
 
 ## Table of Contents
