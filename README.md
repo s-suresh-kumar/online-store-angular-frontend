@@ -5,7 +5,7 @@
 [![Thumbnail](src/assets/images/thumb-1.JPG)](https://github.com/s-suresh-kumar/online-store-angular-frontend)
 
 #### Sample screen shots
-![Books By Category - Computer Books](src\assets\images\books-by-category-computer-books.JPG)
+![Books By Category - Computer Books](src/assets/images/books-by-category-computer-books.JPG)
 ![Books By Category - English Books](src\assets\images\books-by-category-english-books.JPG)
 ![Books By Category - Garden Books](src\assets\images\books-by-category-garden-books.JPG)
 ![Books By Category - Health Books](src\assets\images\books-by-category-health-books.JPG)
