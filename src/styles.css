@@ -44,6 +44,7 @@ button{
   background:0 0
 }
 
+
 img{
   max-width:100%;
   height:auto
@@ -725,6 +726,7 @@ table.table.table-bordered th{
 }
 
 .detail-img{
+  margin-top: 6%;
   width:30%;
 }
 /**/
@@ -764,7 +766,10 @@ font-weight: bold;
 * Footer section
 * ----------------------------
 */
+footer li {
+  color:#fff;
 
+}
 footer ul li a{
   color:#fff
 }
